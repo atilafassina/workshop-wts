@@ -8,6 +8,7 @@ import {
   sendNotification,
 } from "@tauri-apps/plugin-notification";
 import { ask } from "@tauri-apps/plugin-dialog";
+import { checkForUpdates } from "./updater";
 
 function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
@@ -19,13 +20,7 @@ function App() {
   }
 
   onMount(async () => {
-    const response = await ask("do you like Tauri?", {
-      title: "Native Dialog from JS",
-      okLabel: "YES",
-      cancelLabel: "NOT YET",
-    });
-
-    console.log(response);
+    await checkForUpdates(false);
   });
 
   createEffect(async () => {

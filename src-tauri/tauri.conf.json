@@ -21,7 +21,16 @@
       "csp": null
     }
   },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://cdn.crabnebula.app/update/the-huns/workshop-wts/{{target}}-{{arch}}/{{current_version}}"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDY4N0ZDOTc1REM0RDkzM0UKUldRK2swM2NkY2wvYUlSNU1oK2dQclE5Y29KcHAzZm1ieThjT2tDTUlmOVRCRDlpZ1ltQTZ0T3EK"
+    }
+  },
   "bundle": {
+    "createUpdaterArtifacts": true,
     "macOS": {
       "signingIdentity": "-"
     },
