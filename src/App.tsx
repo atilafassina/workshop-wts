@@ -49,11 +49,11 @@ function App() {
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" class="logo vite" alt="Vite logo" />
         </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
         <a href="https://solidjs.com" target="_blank">
           <img src={logo} class="logo solid" alt="Solid logo" />
+        </a>
+        <a href="https://tauri.app" target="_blank">
+          <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
         </a>
       </div>
 

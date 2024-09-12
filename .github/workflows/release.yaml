@@ -34,7 +34,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-22.04", "macos-latest", "windows-latest"]
+        # os: ["ubuntu-22.04", "macos-latest", "windows-latest"]
+        os: ["macos-latest"]
 
     runs-on: ${{ matrix.os }}
 
@@ -77,7 +78,6 @@ jobs:
         run: |
           rustup target add x86_64-apple-darwin
           pnpm install
-          pnpm tauri build -- --target x86_64-apple-darwin
           pnpm tauri build -- --target aarch64-apple-darwin
         env:
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
